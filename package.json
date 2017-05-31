@@ -1,7 +1,7 @@
 {
   "name": "easing-animation",
   "description": "Animation builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "test": "echo \"created by lidebug\""
   },
@@ -23,5 +23,12 @@
   "license": "MIT",
   "dependencies": {
     "libraryjs": "1.2.1"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-clean": "0.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sync": "0.1.4",
+    "gulp-webpack": "1.5.0"
   }
 }

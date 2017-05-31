@@ -1,5 +1,5 @@
 # easing-animation
-### v1.0.0 ( last update: 30 may 2017 )
+### v1.0.1 ( last update: 31 may 2017 )
 
 Animation builder.
 

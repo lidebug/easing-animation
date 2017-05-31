@@ -31,10 +31,12 @@ Animation.create({
 ```
 
 ### Included easing:
+
 * linear
 * easein
 * easeout
 * easeinout
+
 You are always able to use your own. Example:
 ```javascript
 // no easing, no acceleration

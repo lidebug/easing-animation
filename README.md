@@ -1,5 +1,5 @@
 # easing-animation
-### v1.0.1 ( last update: 31 may 2017 )
+### v1.0.2 ( last update: 31 may 2017 )
 
 Animation builder.
 
@@ -30,8 +30,19 @@ Animation.create({
 });
 ```
 
-### Available easing:
+### Included easing:
 * linear
 * easein
 * easeout
 * easeinout
+You are always able to use your own. Example:
+```javascript
+// no easing, no acceleration
+function linear(v) => {
+  return v;
+}
+// accelerating from zero velocity
+function easeInQuad(v) => {
+  return v * v;
+}
+```

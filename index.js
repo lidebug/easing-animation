@@ -1,1 +1,1 @@
-exports.Animation = require("./src/animation");
+module.exports = require("./src/animation");

@@ -29,10 +29,3 @@ module.exports = {
   // acceleration until halfway, then deceleration 
   easeInOutQuint: function (t) { return t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t }
 }
-
-function linear(v) => {
-  return v;
-}
-function easeIn(v) => {
-  return v * v;
-}

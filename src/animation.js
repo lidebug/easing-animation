@@ -14,7 +14,8 @@ class Animation {
     var f = this;
 
     f.interval = new js.Interval();
-    f.start(param);
+    f.isAnimated = false;
+    if (js.is(param)) f.start(param);
   }
 
   //from, to, duration, callback, easing?, onload?, interval?
@@ -22,6 +23,7 @@ class Animation {
     var f = this;
 
     f.stop();
+    f.isAnimated = true;
 
     param.easing = js.or(param.easing, easing.easeinout);
     param.interval = js.or(param.interval, 5);
@@ -35,7 +37,7 @@ class Animation {
       param.callback(result);
       if (i == n) {
         //onload:
-        f.interval.stop();
+        f.stop();
         if (js.is(param.onload)) param.onload(param.to);
         return;
       }
@@ -47,6 +49,7 @@ class Animation {
     var f = this;
 
     f.interval.stop();
+    f.isAnimated = false;
 
     return f;
   }

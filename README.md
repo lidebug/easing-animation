@@ -1,5 +1,5 @@
 # easing-animation
-### v1.0.2 ( last update: 31 may 2017 )
+### v1.0.3 ( last update: 1 june 2017 )
 
 Animation builder.
 
@@ -14,8 +14,10 @@ var Animation = require("easing-animation");
 ```
 
 ### How to use
+Start new one
 ```javascript
-Animation.create({
+var animation = Animation.create();
+animation.start({
   from: 5, to: 7,
   duration: 100,
   easing: Animation.easing.easeout,
@@ -29,6 +31,16 @@ Animation.create({
   }
 });
 ```
+Stop when necessary
+```javascript
+animation.stop();
+```
+On going?
+```javascript
+if (animation.isAnimated) {
+  // ...
+}
+```
 
 ### Included easing:
 
@@ -39,12 +51,23 @@ Animation.create({
 
 You are always able to use your own. Example:
 ```javascript
-// no easing, no acceleration
+// Like this
 function linear(v) => {
   return v;
 }
-// accelerating from zero velocity
+
+// Or something else
 function easeInQuad(v) => {
   return v * v;
 }
+
+Animation.create({
+  from: 1, to: 100,
+  duration: 1000,
+  easing: easeInQuad, // <-- the one
+  callback: (v) => {
+    //on going
+    console.log(v);
+  }
+});
 ```

@@ -1,3 +1,9 @@
+## v1.0.3
+1 june 2017
+
+* isAnimated parameter added
+* A little more documentation
+
 ## v1.0.2
 31 may 2017
 

@@ -1,3 +1,8 @@
+## v1.0.4
+8 june 2017
+
+* babel added. Now dist in es2015
+
 ## v1.0.3
 1 june 2017
 

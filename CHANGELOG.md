@@ -1,3 +1,13 @@
+## v1.1.0
+14 june 2017
+
+* New function: smoothize(from, to, ease)
+* New function: recolorize(color1, color2, ease)
+* New function: hexToRgb(hex)
+* New function: rgbToHex(r, g, b)
+* New function: rgba(hex, opacity)
+* New function: randcolor()
+
 ## v1.0.4
 8 june 2017
 

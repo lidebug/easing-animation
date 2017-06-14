@@ -1,5 +1,6 @@
 var js = require("libraryjs");
 var BasicEasing = require("./easing");
+var smoothize = require("./smoothize");
 
 var easing = {
   linear: BasicEasing.linear,
@@ -32,8 +33,8 @@ class Animation {
 
     var i = 0;
     f.interval.create(param.interval, () => {
-      var eased = param.easing(i/n);
-      var result = param.from + (param.to - param.from) * eased;
+      var result = smoothize(param.from, param.to, param.easing(i/n));
+
       param.callback(result);
       if (i == n) {
         //onload:
@@ -61,6 +62,7 @@ function create(param) {
 }
 
 module.exports = {
+  body: Animation,
   create: create,
   easing: easing
 };

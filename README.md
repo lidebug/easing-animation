@@ -1,5 +1,5 @@
 # easing-animation
-### v1.0.4 ( last update: 8 june 2017 )
+### v1.1.0 ( last update: 14 june 2017 )
 
 Animation builder.
 
@@ -70,4 +70,51 @@ Animation.create({
     console.log(v);
   }
 });
+```
+
+### Extra
+smoothize(from, to, ease)
+```javascript
+Animation.create({
+  from: 0, to: 1,
+  duration: 1000,
+  easing: Animation.easing.easeinout,
+  callback: (v) => {
+    var length = Animation.smoothize(300, 320, v);
+    var width = Animation.smoothize(110, 200, v);
+
+    // ...
+  }
+});
+```
+
+recolorize(color1, color2, ease)
+```javascript
+Animation.create({
+  from: 0, to: 1,
+  duration: 1000,
+  easing: Animation.easing.easeinout,
+  callback: (v) => {
+    var color = Animation.recolorize("red", "#1843E2", v);
+
+    // ...
+  }
+});
+```
+
+hexToRgb(hex)
+```javascript
+var rgb = Animation.hexToRgb("#41D73D");
+var red = Animation.hexToRgb("red");
+```
+
+rgbToHex(r, g, b)
+```javascript
+var hex = Animation.rgbToHex(65, 215, 61);
+var red = Animation.rgbToHex(255, 0, 0);
+```
+
+randcolor()
+```javascript
+var color = Animation.randcolor();
 ```

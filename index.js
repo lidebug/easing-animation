@@ -1,7 +1,9 @@
+const objectAssign = require("object-assign");
+
 var index = {};
-Object.assign(index, require("./src/animation"));
-Object.assign(index, require("./src/rgb"));
-Object.assign(index, {
+objectAssign(index, require("./src/animation"));
+objectAssign(index, require("./src/rgb"));
+objectAssign(index, {
   recolorize: require("./src/recolorize"),
   smoothize: require("./src/smoothize"),
   randcolor: require("./src/randcolor")

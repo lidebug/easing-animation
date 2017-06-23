@@ -1,16 +1,22 @@
 # easing-animation
-### v1.1.0 ( last update: 14 june 2017 )
+### v1.1.1 ( last update: 24 june 2017 )
 
 Animation builder.
 
 ### Install
+npm
 ```javascript
 npm i easing-animation --save
 ```
 
-### Node.js
+Node.js
 ```javascript
 var Animation = require("easing-animation");
+```
+
+Browser
+```javascript
+<script src="/node_modules/easing-animation/dist/easing-animation.js"></script>
 ```
 
 ### How to use

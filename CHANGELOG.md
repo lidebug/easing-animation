@@ -1,3 +1,8 @@
+## v1.1.1
+24 june 2017
+
+* Object.assign() fix for IE
+
 ## v1.1.0
 14 june 2017
 
